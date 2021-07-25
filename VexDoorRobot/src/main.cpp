@@ -24,6 +24,7 @@ int main() {
   vexcodeInit();
   Brain.Screen.render(true,false);
 
+  //detects the state of the arduino switch and if it detects that the switch has been pressed, moves the door to the open position, if it detects that it's been unpressed the door closes
   while(true){
     if(LimitSwitchA.pressing()){
       Motor2.spinToPosition(3.2,turns, true);
